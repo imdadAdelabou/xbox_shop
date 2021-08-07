@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:xbox_shop/components/custom_button.dart';
 
 class FirstPage extends StatefulWidget {
   FirstPage({Key? key}) : super(key: key);
@@ -63,6 +64,18 @@ class _FirstPageState extends State<FirstPage> {
                   letterSpacing: -0.1,
                   fontFamily: "MONTSERRAT",
                   color: Color(0xff494949),
+                ),
+              ),
+              Spacer(),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Padding(
+                  padding: EdgeInsets.only(left: maxWidth * .5),
+                  child: CustomButton(
+                    content: Icon(
+                      FontAwesomeIcons.arrowRight,
+                    ),
+                  ),
                 ),
               ),
             ],
