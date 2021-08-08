@@ -1,6 +1,8 @@
 import "package:flutter/material.dart";
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:xbox_shop/components/circle_elem.dart';
 import 'package:xbox_shop/components/custom_button.dart';
+import 'package:xbox_shop/components/progess_bar.dart';
 
 class FirstPage extends StatefulWidget {
   FirstPage({Key? key}) : super(key: key);
@@ -66,12 +68,28 @@ class _FirstPageState extends State<FirstPage> {
                   color: Color(0xff494949),
                 ),
               ),
+              SizedBox(height: 20.0),
+              Stack(
+                children: [
+                  Row(
+                    children: List.generate(
+                      4,
+                      (index) => Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: CircleElem(),
+                      ),
+                    ),
+                  ),
+                  ProgressBar(),
+                ],
+              ),
               Spacer(),
               Align(
                 alignment: Alignment.bottomRight,
                 child: Padding(
                   padding: EdgeInsets.only(left: maxWidth * .5),
                   child: CustomButton(
+                    action: () {},
                     content: Icon(
                       FontAwesomeIcons.arrowRight,
                     ),

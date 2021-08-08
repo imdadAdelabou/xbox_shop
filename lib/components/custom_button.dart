@@ -2,7 +2,11 @@ import "package:flutter/material.dart";
 
 class CustomButton extends StatelessWidget {
   final Widget content;
-  CustomButton({required this.content});
+  final Function() action;
+  CustomButton({
+    required this.content,
+    required this.action,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,12 +19,12 @@ class CustomButton extends StatelessWidget {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
               topLeft: Radius.circular(56.0),
-              bottomRight: Radius.circular(30),
+              bottomRight: Radius.circular(35),
             ),
           ),
         ),
         child: content,
-        onPressed: () {},
+        onPressed: action,
       ),
     );
   }
