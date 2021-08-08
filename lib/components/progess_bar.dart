@@ -1,12 +1,14 @@
 import "package:flutter/material.dart";
 
 class ProgressBar extends StatelessWidget {
-  ProgressBar();
+  final double left;
+  ProgressBar({required this.left});
 
   @override
   Widget build(BuildContext context) {
     return Positioned(
       top: 5,
+      left: left,
       child: Container(
         width: 30,
         height: 10,

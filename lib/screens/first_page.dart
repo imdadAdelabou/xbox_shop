@@ -69,19 +69,24 @@ class _FirstPageState extends State<FirstPage> {
                 ),
               ),
               SizedBox(height: 20.0),
-              Stack(
-                children: [
-                  Row(
-                    children: List.generate(
-                      4,
-                      (index) => Padding(
-                        padding: const EdgeInsets.only(right: 8),
-                        child: CircleElem(),
+              Padding(
+                padding: const EdgeInsets.only(left: 53.0),
+                child: Stack(
+                  children: [
+                    Row(
+                      children: List.generate(
+                        4,
+                        (index) => Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: CircleElem(),
+                        ),
                       ),
                     ),
-                  ),
-                  ProgressBar(),
-                ],
+                    ProgressBar(
+                      left: currentPage == 0 ? 0 : 35,
+                    ),
+                  ],
+                ),
               ),
               Spacer(),
               Align(

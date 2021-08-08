@@ -10,7 +10,7 @@ class CircleElem extends StatelessWidget {
       height: 20.0,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: Colors.red,
+        color: Colors.grey,
       ),
     );
   }
